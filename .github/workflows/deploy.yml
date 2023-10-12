@@ -1,7 +1,10 @@
 name: WORKFLOW
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+    - master
+  # workflow_dispatch:
     # inputs:
     #   runApprova:
     #     description: 'Run?'
@@ -9,11 +12,12 @@ on:
     #       - Yes
     
 jobs:
-	terraform_steps:
-    	name: Terraform
+	terraform:
+    	name: "Terraform"
       runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
