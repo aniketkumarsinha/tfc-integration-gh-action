@@ -15,5 +15,10 @@ terraform {
     workspaces {
       name = "tfc-integration-with-gh-actions"
     }
+  }
+}
 
+resource "azurerm_resource_group" "rg" {
+  name = "azure-tfc-gh-rg"
+  location = "centralindia"
 }
