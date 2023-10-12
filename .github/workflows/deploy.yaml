@@ -1,7 +1,7 @@
 name: Terrform Integrated GitHub Actions Workflow
 
 on:
-	workflow_dispatch:
+workflow_dispatch:
     inputs:
       runApprova:
         description: 'Run?'
