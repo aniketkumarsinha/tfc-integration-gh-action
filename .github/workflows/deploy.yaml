@@ -1,39 +1,39 @@
-name: Terrform Integrated GitHub Actions Workflow
+name: WORKFLOW
 
 on:
-workflow_dispatch:
-    inputs:
-      runApprova:
-        description: 'Run?'
-        options:
-          - Yes
+  workflow_dispatch:
+    # inputs:
+    #   runApprova:
+    #     description: 'Run?'
+    #     options:
+    #       - Yes
     
 jobs:
 	terraform:
     	name: Terraform
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
 
-          - name: Setup Terraform
-            uses: hashicorp/setup-terraform@v2
-            with:
-            terraform_version: 1.1.7
-            cli_config_credentials_token: ${{ secrets. TF_API_TOKEN }}
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.1.7
+          cli_config_credentials_token: ${{ secrets. TF_API_TOKEN }}
 
-        	- name: Terraform Init
-            id: init
-            run: terraform init
-              
-          - name: Terraform Validate
-            id: validate
-            run: terraform validate -no-color
+      - name: Terraform Init
+        id: init
+        run: terraform init
+          
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
+        
+      - name: Terraform Plan
+        id: plan
+        run: terraform plan -no-color -input=false
+        
+      - name: Terraform Apply
+        id: apply
+        run: terraform apply -auto-approve -input=false
             
-          - name: Terraform Plan
-            id: plan
-            run: terraform plan -no-color -input=false
-            
-          - name: Terraform Apply
-            id: apply
-            run: terraform apply -auto-approve -input=false
-              
