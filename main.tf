@@ -18,6 +18,12 @@ terraform {
   }
 }
 
+provider "azurerm" {
+  features {
+    
+  }
+}
+
 resource "azurerm_resource_group" "rg" {
   name = "azure-tfc-gh-rg"
   location = "centralindia"

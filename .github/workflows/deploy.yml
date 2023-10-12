@@ -2,15 +2,6 @@ name: WORKFLOW
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches:
-  #   - master
-  # workflow_dispatch:
-    # inputs:
-    #   runApprova:
-    #     description: 'Run?'
-    #     options:
-    #       - Yes
     
 jobs:
   terraform:
