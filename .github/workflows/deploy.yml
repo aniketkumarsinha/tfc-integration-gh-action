@@ -12,7 +12,7 @@ on:
     #       - Yes
     
 jobs:
-	terraform:
+  terraform:
     name: "Terraform"
     runs-on: ubuntu-latest
     steps:
