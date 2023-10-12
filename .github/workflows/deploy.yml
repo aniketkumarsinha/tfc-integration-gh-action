@@ -9,8 +9,7 @@ on:
     #       - Yes
     
 jobs:
-
-	terraform-steps:
+	terraform_steps:
     	name: Terraform
       runs-on: ubuntu-latest
       steps:
