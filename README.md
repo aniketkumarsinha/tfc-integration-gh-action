@@ -24,7 +24,7 @@ We choose API-driven workflow because we are integrating TFC with GitHub Actions
 - Tap on **Create Workspace** button.
 - Create a GitHub repository where you would be adding your TF code and GitHub Actions workflow files. 
 - Let's now create the API token in TFC.
- - Go to the home page of your TFC organization - https://app.terraform.io/app/<ORGANIZATION NAME>/workspaces
+ - Go to the home page of your TFC organization - https://app.terraform.io/app/ORGANIZATION_NAME/workspaces
  - Open Settings.
 ![Choosing Settings option in TFC](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bqe540ymlb7xocy1f2s7.png)
  - Choose **API tokens** section.
