@@ -25,6 +25,6 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name = "azure-tfc-gh-rg"
+  name = "azure-tfc-gh"
   location = "centralindia"
 }
